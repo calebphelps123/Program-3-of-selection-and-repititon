@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Program 3 of selection and repititon.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="output.txt" />
+    <Text Include="TextFile1.txt" />
+    <Text Include="TextFile2.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

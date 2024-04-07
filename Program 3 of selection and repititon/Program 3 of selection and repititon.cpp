@@ -20,15 +20,16 @@ void mergeFiles(const string& inputFile1, const string& inputFile2, const string
 
     while (!file1.eof() && !file2.eof()) {
         // Extract the key (student name) from each line
-        string key1 = line1.substr(0, line1.find(' '));
-        string key2 = line2.substr(0, line2.find(' '));
+        
 
-        if (key1 < key2) {
+        if (line1 < line2) {
             mergedFile << line1 << endl;
+            cout << "(1) " << line1 << endl;
             getline(file1, line1);
         }
         else {
             mergedFile << line2 << endl;
+            cout << "(2) " << line2 << endl;   
             getline(file2, line2);
         }
     }
@@ -36,10 +37,12 @@ void mergeFiles(const string& inputFile1, const string& inputFile2, const string
     // Write remaining lines from both files
     while (!file1.eof()) {
         mergedFile << line1 << endl;
+        cout << "(3) " << line1 << endl;
         getline(file1, line1);
     }
     while (!file2.eof()) {
         mergedFile << line2 << endl;
+        cout << "(4) " << line2 << endl;
         getline(file2, line2);
     }
 
